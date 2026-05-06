@@ -127,3 +127,9 @@ server.listen(PORT, () => {
   console.log(`Message board running on http://localhost:${PORT}`);
   console.log(`Database: ${DB_PATH}`);
 });
+
+// Add this line to ensure the database directory exists
+const DB_DIR = path.dirname(DB_PATH);
+if (!fs.existsSync(DB_DIR)) {
+  fs.mkdirSync(DB_DIR, { recursive: true });
+}

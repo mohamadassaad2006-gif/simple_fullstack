@@ -1,0 +1,11 @@
+# Database files
+*.db
+*.db-journal
+data/
+
+# Node modules (though you have none)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
